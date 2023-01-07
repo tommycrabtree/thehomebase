@@ -25,9 +25,9 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public string GetUser()
+        public async Task<ActionResult<AppUser>> GetUser(int id)
         {
-            return "Hello User";
+            return await _context.Users.FindAsync(id);
         }
     }
 }
