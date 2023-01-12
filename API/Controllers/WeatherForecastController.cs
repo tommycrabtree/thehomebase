@@ -8,7 +8,7 @@ public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
     {
-        "Burger Time", "Pacman", "Galaga", "Fifa", "Mario Bros", "The Legend of Zelda"
+        "Rodney Dangerfield", "Katt Williams", "Bernie Mac", "Ron White", "Jim Gaffigan", "Ralphie May"
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
