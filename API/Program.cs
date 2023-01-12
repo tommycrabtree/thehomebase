@@ -6,10 +6,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+
 builder.Services.AddDbContext<DataContext>(opt =>
 {
     opt.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
 builder.Services.AddCors();
 
 var app = builder.Build();
@@ -26,7 +28,17 @@ app.UseDefaultFiles();
 // looks for a wwwroot folder and serves the content from inside it
 app.UseStaticFiles();
 
+// app.UseAuthentication(); goes here
+// app.UseAuthorization(); goes here
+
+// gets the index.html from wwwroot
+app.UseDefaultFiles();
+
+// serves the content in the wwwroot folder
+app.UseStaticFiles();
+
 app.MapControllers();
+app.MapFallbackToController("Index", "Fallback");
 
 // app.MapHub<PresenceHub>("hubs/presence"); goes here
 // app.MapHub<MessageHub>("hubs/message"); goes here
