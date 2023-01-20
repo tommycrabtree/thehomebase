@@ -28,17 +28,7 @@ app.UseDefaultFiles();
 // looks for a wwwroot folder and serves the content from inside it
 app.UseStaticFiles();
 
-// app.UseAuthentication(); goes here
-// app.UseAuthorization(); goes here
-
-// gets the index.html from wwwroot
-app.UseDefaultFiles();
-
-// serves the content in the wwwroot folder
-app.UseStaticFiles();
-
 app.MapControllers();
-app.MapFallbackToController("Index", "Fallback");
 
 // app.MapHub<PresenceHub>("hubs/presence"); goes here
 // app.MapHub<MessageHub>("hubs/message"); goes here
