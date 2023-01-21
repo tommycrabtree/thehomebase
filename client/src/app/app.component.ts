@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent implements OnInit {
   baseUrl = environment.apiUrl;
-  title = 'oasis';
+  title = 'walking skeleton with authentication and authorization';
   users: any;
 
   constructor(private http: HttpClient) {}
@@ -19,8 +19,6 @@ export class AppComponent implements OnInit {
       next: response => this.users = response,
       error: error => console.log(error),
       complete: () => console.log('Request is complete.')
-    })
+    });
   }
-
-
 }
