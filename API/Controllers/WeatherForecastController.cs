@@ -6,7 +6,7 @@ public class WeatherForecastController : BaseApiController
 {
     private static readonly string[] Summaries = new[]
     {
-        "Ill N", "Butch", "Puzo", "Rex", "Pentagram", "Buck", "Jane", "Thugs", "Filthy", "La P"
+        "PA", "FL", "MD", "NY", "TN", "CA", "WV", "OR", "NC", "VA"
     };
 
     private readonly ILogger<WeatherForecastController> _logger;
