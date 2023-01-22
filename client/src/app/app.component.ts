@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class AppComponent implements OnInit {
   baseUrl = environment.apiUrl;
-  title = 'walking skeleton with authentication and authorization';
+  title = 'walking skeleton with authentication and authorization 2';
   users: any;
 
   constructor(private http: HttpClient) {}
